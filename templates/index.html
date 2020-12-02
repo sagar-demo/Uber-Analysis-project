@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Uber Rides Prediction Model</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <h1><i>Uber Weekly Rides Analysis</i></h1>
+        <form action="{{url_for('predict')}}" method="post">
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Price per week</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Price per week"name="Priceperweek"required="required">
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Population</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Population"name="Population"required="required">
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Monthly income</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Monthly income"name="Monthlyincome"required="required">
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Average parking per month</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Average parking per month"name="Averageparkingpermonth"required="required">
+              </div>
+              
+
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+        <br>
+        <br>
+        {{ prediction_text }}
+       <!-- Footer -->
+       <div class='footer'>
+        <div class="contact">
+            <a target="_blank" href="https://github.com/sagar-demo/ipl_project"><i class="fab fa-github fa-lg contact-icon"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/rana-sagar-a76596135/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+        </div><br>
+        <p class='footer-description'>Made with ❤️ by Sagar </p>
+    </div>
+    </body>
+</html>

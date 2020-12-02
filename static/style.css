@@ -1,0 +1,11 @@
+body{
+	margin: 0px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding: 0px;
+	text-align: center;
+	background-image: url("/static/img1.jpg");
+	background-repeat: no-repeat, repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+}
